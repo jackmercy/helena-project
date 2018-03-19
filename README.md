@@ -1,10 +1,10 @@
 # Helena's Gift
 
 
-##To run project at dev
+## To run project at dev
 
-Open CMD and run `gulp` for server side
-Open second CMD and run `npm start` for angular app
+Run `gulp` to run express
+Run `npm start` for angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
