@@ -1,0 +1,18 @@
+header, main, footer {
+    padding-left: 240px;
+  }
+  
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+
+  .view {
+    //background: url("") no-repeat center center;
+    background-size: cover;
+}
+
+.main-panel {
+  /* background: #ffebd0; */
+}

@@ -18,7 +18,7 @@ var userController = function(User)  {
     /**
      * Handle login request
      * @property {string} req.body.username - Username of user
-     * @property {string} res.body.password - Password of user
+     * @property {string} res.body.role - Password of user
      * @returns {JSON}
      */
     var postLogin = function(req, res) {
@@ -27,26 +27,31 @@ var userController = function(User)  {
         if(!req.body.username) {
             res.status(400);
             res.send('Username is required');
-        } else if(!req.body.password) {
+        } else if(!req.body.role) {
             res.status(400);
-            res.send('Password is required');
+            res.send('Role is required');
         }
         
         // handle login request in mongodb - should move those lines into model method
         // see documentation at : http://mongoosejs.com/docs/guide.html
-        User.findOne({username: user.username}, function(err, user) {
+        User.findOne({username: user.username, role: user.role}, function(err, user) {
             if(err) {
                 console.log('ERR');
             }
             else {
-                res.status(200);
-                /* delete user.password
-                delete user._id */ // cound not work - wtf
-                const res_user = {
-                    username: user.username,
-                    name: user.name
+                if(!user) {
+                    res.status(400).send('No user is found');   
                 }
-                res.json(res_user);
+                else {
+                    res.status(200);
+                    /* delete user.password
+                    delete user._id */ // not work - wtf
+                    const res_user = {
+                        username: user.username,
+                        name: user.role
+                    }
+                    res.json(res_user);
+                }
             }
         });
     }

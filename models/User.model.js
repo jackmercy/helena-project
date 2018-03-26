@@ -5,10 +5,7 @@ var UserSchema = new Schema({
     username: {
         type: String
     },
-    password: {
-        type: String
-    },
-    name: {
+    role: {
         type: String
     }
 });

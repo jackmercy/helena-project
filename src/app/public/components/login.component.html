@@ -1,0 +1,42 @@
+
+<div class="row justify-content-md-center form-layout">
+    <div class="col-md-auto col-layout">
+        <form [formGroup]="loginFormGroup" class="from-gourp">
+            <div class="toolbar-box">
+                <mat-toolbar class="login-toolbar">
+                    <i class="material-icons">lock_outline</i>
+                    <span class="fill-remaining-space">
+                        Welcome to my page
+                    </span>
+                </mat-toolbar>
+            </div>
+            <!-- User -->
+            <mat-form-field class="full-width-input">
+                <input matInput placeholder="Username" formControlName="user">
+                <mat-error *ngIf="username.invalid">{{getUserErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <!-- Role -->
+            <mat-form-field class="full-width-input">
+                <input matInput placeholder="Role" formControlName="role">
+                <mat-error *ngIf="role.invalid">{{getRoleErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <!-- Sign in button -->
+            <div id="sign-in-btn">
+                <button mat-button (click)="onLogin()" class=" full-width-input"
+                        [disabled]="!loginFormGroup.valid || canDisableSignInButton">
+                    <span class="text-color-login-form">Sign In</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="atom">
+        <div class="electron"></div>
+        <div class="electron"></div>
+        <div class="electron"></div>
+    </div>
+</div>
+

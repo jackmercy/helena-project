@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 /* Routes */ 
 
 // index page
-app.get('/doto',function(req, res) {
+app.get('/check-server',function(req, res) {
   res.send('Doto plus');
 });
 

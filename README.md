@@ -1,10 +1,12 @@
 # Helena's Gift
 
 
-## To run project at dev
+## How to run - development
 
 Run `gulp` to run express
+
 Run `npm start` for angular
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 

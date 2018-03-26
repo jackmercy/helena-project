@@ -1,5 +1,6 @@
 {
   "extends": "../tsconfig.json",
+  "include": [ "**/*.ts", "../node_modules/angular-bootstrap-md/index.ts" ],
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
@@ -10,4 +11,6 @@
     "test.ts",
     "**/*.spec.ts"
   ]
+  
+
 }
