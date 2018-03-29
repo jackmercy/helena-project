@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MatSnackBar } from '@angular/material';
 declare interface RouteInfo {
     path: string;
     title: string;
@@ -8,9 +8,9 @@ declare interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-    { path: 'supprise', title: 'Supprise',  icon: 'favorite', class: '' },
-    { path: 'memories', title: 'Our memories',  icon: 'history', class: '' },
-    { path: 'chatbox', title: 'Chat box',  icon: 'fingerprint', class: '' }
+    { path: 'gift-card', title: 'Supprise',  icon: 'favorite', class: '' },
+    { path: 'memories', title: 'Our memories',  icon: 'history', class: '' }/* ,
+    { path: 'chatbox', title: 'Chat box',  icon: 'fingerprint', class: '' } */
 ];
 
 
@@ -24,9 +24,15 @@ export const ROUTES: RouteInfo[] = [
 export class NavigationComponent implements OnInit {
     menuItems: any[];
 
-    constructor() { }
+    constructor(public snackBar: MatSnackBar) { }
 
     ngOnInit() {
         this.menuItems = ROUTES.filter(menuItem => menuItem);
+    }
+
+    onChatBox() {
+        this.snackBar.open('This feature is not implement yet', 'Got it', {
+            duration: 5000,
+        });
     }
 }

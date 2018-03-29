@@ -10,6 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SuppriseComponent } from './components/supprise.component';
 import { MemoriesComponent } from './components/memories.component';
+import { GiftCardComponent } from './components/gift-card.component';
 @NgModule({
   imports: [
       CommonModule,
@@ -25,7 +26,8 @@ import { MemoriesComponent } from './components/memories.component';
   declarations: [
       HomepageComponent,
       SuppriseComponent,
-      MemoriesComponent
+      MemoriesComponent,
+      GiftCardComponent
   ],
   schemas: [NO_ERRORS_SCHEMA]
 })

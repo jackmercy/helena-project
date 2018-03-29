@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { SuppriseComponent } from './home/components/supprise.component';
 import { HomepageComponent } from './home/components/homepage.component';
 import { MemoriesComponent } from './home/components/memories.component';
+import { GiftCardComponent } from './home/components/gift-card.component';
 import { LoginComponent } from './public/components/login.component';
 import { PublicComponent } from './public/components/public.component';
+
 @NgModule({
     imports: [
         RouterModule.forRoot([
@@ -27,6 +29,9 @@ import { PublicComponent } from './public/components/public.component';
                     },
                     {
                         path: 'memories', component: MemoriesComponent
+                    },
+                    {
+                        path: 'gift-card', component: GiftCardComponent
                     }
                 ]
             }

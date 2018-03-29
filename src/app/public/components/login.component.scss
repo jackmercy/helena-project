@@ -23,7 +23,9 @@
     padding: 30px 20px 20px 20px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
-
+input.role {
+  -webkit-text-security: square;
+}
 .full-width-input {
     width: 100%;
     &.mat-button {

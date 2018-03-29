@@ -14,27 +14,29 @@ const httpOptions = {
 
 @Injectable()
 export class CoreService {
-    private loginUrl = '/api/login';
+    user: any;
+    constructor() { }
 
-    constructor(private _http: HttpClient) { }
-
-    getAllUser(): Observable<any> {
-        return this._http.get(this.loginUrl, httpOptions)
-                    .map( res => {
-                        return res;
-                    });
+    login(username: string, role: string): boolean {
+        if (username === 'Helena' && role === 'master') {
+            const result = {
+                username: username,
+                role: role
+            };
+            this.user = result;
+            return true;
+        } else if (username === 'Khoai' && role === 'slave') {
+            const result = {
+                username: username,
+                role: role
+            };
+            this.user = result;
+            return true;
+        }
+        return false;
     }
 
-    login(username: string, role: string): Observable<any> {
-        return this._http.post(this.loginUrl, JSON.stringify({username: username, role: role}), httpOptions)
-                    .map((response: Response) => {
-                        const user = response;
-
-                        /* if (user && user['accessToken']) {
-                            sessionStorage.setItem('currentUser', JSON.stringify(user));
-                        } */
-
-                        return user;
-                    });
+    getUserInfo(): Object {
+        return this.user;
     }
 }

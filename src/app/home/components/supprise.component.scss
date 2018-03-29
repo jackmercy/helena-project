@@ -907,7 +907,7 @@
     $balloon1-bg-color: rgba(234, 234, 234, 0.9);
     $balloon2-bg-color: rgba(232, 218, 178, 0.9);
     $balloon3-bg-color: rgba(221, 110, 66, 0.89);
-    $balloon4-bg-color: rgba(79, 109, 122, 0.84);
+    $balloon4-bg-color: rgba(51, 153, 255, 0.84);
     $balloon5-bg-color: rgba(234, 234, 234, 0.9);
 /*   --bg-color: #fff; */
 
@@ -918,8 +918,8 @@
   $balloon-anim-5: balloon5 15s ease infinite;
   $balloon-anim-6: balloon7 5s ease infinite;
 
-.balloons {
-  background: var(--bg-color);
+/* .balloons {
+  background: $bg-color;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -927,7 +927,7 @@
   right: 0;
   padding: 50px;
   min-width: 600px;
-}
+} */
 
 .happy,
 .birthday {
@@ -971,7 +971,7 @@
   color: #4f6d7a;
   font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
 }
-
+/* Happy */
 .happy .balloon:nth-child(1)::before {
   content: "H";
 }
@@ -987,28 +987,35 @@
 .happy .balloon:nth-child(5)::before {
   content: "Y";
 }
+/*  */
 .birthday .balloon:nth-child(1)::before {
-  content: "B";
-}
-.birthday .balloon:nth-child(2)::before {
-  content: "I";
-}
-.birthday .balloon:nth-child(3)::before {
-  content: "R";
-}
-.birthday .balloon:nth-child(4)::before {
-  content: "T";
-}
-.birthday .balloon:nth-child(5)::before {
   content: "H";
 }
-.birthday .balloon:nth-child(6)::before {
-  content: "D";
+.birthday .balloon:nth-child(2)::before {
+  content: "E";
 }
-.birthday .balloon:nth-child(7)::before {
+.birthday .balloon:nth-child(3)::before {
+  content: "L";
+}
+.birthday .balloon:nth-child(4)::before {
+  content: "E";
+}
+.birthday .balloon:nth-child(5)::before {
+  content: "N";
+}
+.birthday .balloon:nth-child(6)::before {
   content: "A";
 }
+.birthday .balloon:nth-child(7)::before {
+  content: "'S";
+}
 .birthday .balloon:nth-child(8)::before {
+  content: "D";
+}
+.birthday .balloon:nth-child(9)::before {
+  content: "A";
+}
+.birthday .balloon:nth-child(10)::before {
   content: "Y";
 }
 @keyframes balloon1 {
@@ -1088,51 +1095,51 @@
 }
 
 .balloon2 {
-  background: var($balloon2-bg-color);
+  background: $balloon2-bg-color;
   box-shadow: inset 10px 10px 10px #d5c7a1;
 }
 .balloon2::after {
-  color: var($balloon2-bg-color);
+  color: $balloon2-bg-color;
 }
 
 .balloon3 {
-  background: var($balloon3-bg-color);
+  background: $balloon3-bg-color;
   box-shadow: inset 10px 10px 10px #cf6840;
 }
 .balloon3::after {
-  color: var($balloon3-bg-color);
+  color: $balloon3-bg-color;
 }
 
 .balloon4 {
-  background: var($balloon4-bg-color);
-  box-shadow: inset 10px 10px 10px #4f6d7a;
+  background: $balloon4-bg-color;
+  box-shadow: inset 10px 10px 10px #2288FF;
 }
 .balloon4::after {
-  color: var($balloon4-bg-color);
+  color: $balloon4-bg-color;
 }
 .balloon5 {
-  background: var($balloon5-bg-color);
+  background: $balloon5-bg-color;
   box-shadow: inset 10px 10px 10px #cbc8c8;
 }
 .balloon5::after {
-  color: var($balloon5-bg-color);
+  color: $balloon5-bg-color;
 }
 
 .balloon-anim1 {
   animation: $balloon-anim-1;
 }
 .balloon-anim2 {
-  animation: var($balloon-anim-2);
+  animation: $balloon-anim-2;
 }
 .balloon-anim3 {
-  animation: var($balloon-anim-3);
+  animation: $balloon-anim-3;
 }
 .balloon-anim4 {
-  animation: var($balloon-anim-4);
+  animation: $balloon-anim-4;
 }
 .balloon-anim5 {
-  animation: var($balloon-anim-5);
+  animation: $balloon-anim-5;
 }
 .balloon-anim6 {
-  animation: var($balloon-anim-6);
+  animation: $balloon-anim-6;
 }

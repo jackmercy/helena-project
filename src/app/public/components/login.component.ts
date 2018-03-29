@@ -13,6 +13,8 @@ import { MatSnackBar } from '@angular/material';
 export class LoginComponent implements OnInit {
     loginFormGroup: FormGroup;
     canDisableSignInButton: boolean;
+    isLoggedIn: any;
+
     constructor(private _formBuilder: FormBuilder,
                 private _coreService: CoreService,
                 private _router: Router,
@@ -28,18 +30,14 @@ export class LoginComponent implements OnInit {
     }
 
     onLogin() {
-        this._coreService.login(this.username.value, this.role.value)
-            .subscribe(
-                data => {
-                    this._router.navigate(['/home']);
-                },
-                error => {
-                    console.log(error.error);
-                    this.snackBar.open(error.error, 'Got it', {
-                        duration: 2000,
-                    });
-                }
-            );
+        this.isLoggedIn = this._coreService.login(this.username.value, this.role.value);
+        if (this.isLoggedIn) {
+            this._router.navigate(['/home/gift-card']);
+        } else {
+            this.snackBar.open('No user is found', 'Got it', {
+                duration: 5000,
+            });
+        }
     }
 
     get username() {

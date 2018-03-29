@@ -5,39 +5,21 @@
             <div class="logo-img">
                 <img src="/assets/img/angular2-logo-white.png"/>
             </div>
-            CLASSIFIED
+            Helena Project
         </a>
     </div>
 
-    <ul class="nav responsive-nav">
-<!--         <li>
-            <a [routerLink]="">
-                <button mat-button>
-                    <i class="material-icons">favorite</i>
-                    <p class="hidden-lg hidden-md">
-                        Dashboard
-                    </p>
-                </button>
-            </a>
-        </li>
-        <li routerLinkActive="active">
-            <a [routerLink]="">
-                <i class="material-icons">history</i>
-                <p class="hidden-lg hidden-md">
-                    Imagesssss
-                </p>
-            </a>
-        </li>
-        <li>
-            <i class="material-icons">fingerprint</i>
-            <button mat-button>Chat box</button>
-        </li> -->
-
-        <!-- Menu go here -->
+    <ul id="nav-item" class="nav responsive-nav">
         <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
             <a class="custom-sidenav-item" [routerLink]="[menuItem.path]" mat-button>
                 <i class="material-icons">{{menuItem.icon}}</i>
                 <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+        <li>
+            <a class="custom-sidenav-item" (click)="onChatBox()" mat-button>
+                <i class="material-icons">fingerprint</i>
+                <p>Chat box</p>
             </a>
         </li>
     </ul>

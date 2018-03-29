@@ -1,4 +1,7 @@
-$theme: #fcd456;
-.mat-toolbar {
-    background-color: $theme;
+
+#nav-item {
+    .mat-button {
+        width: 200px;
+        /* height: 30px; */
+    }
 }

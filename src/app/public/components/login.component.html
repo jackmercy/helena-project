@@ -5,26 +5,26 @@
             <div class="toolbar-box">
                 <mat-toolbar class="login-toolbar">
                     <i class="material-icons">lock_outline</i>
-                    <span class="fill-remaining-space">
+                    <span id="welcome" class="fill-remaining-space">
                         Welcome to my page
                     </span>
                 </mat-toolbar>
             </div>
             <!-- User -->
             <mat-form-field class="full-width-input">
-                <input matInput placeholder="Username" formControlName="user">
+                <input id="input-user" matInput placeholder="Username" formControlName="user">
                 <mat-error *ngIf="username.invalid">{{getUserErrorMessage()}}</mat-error>
             </mat-form-field>
 
             <!-- Role -->
             <mat-form-field class="full-width-input">
-                <input matInput placeholder="Role" formControlName="role">
+                <input id="input-role" class="role" matInput placeholder="Role" formControlName="role">
                 <mat-error *ngIf="role.invalid">{{getRoleErrorMessage()}}</mat-error>
             </mat-form-field>
 
             <!-- Sign in button -->
-            <div id="sign-in-btn">
-                <button mat-button (click)="onLogin()" class=" full-width-input"
+            <div >
+                <button id="sign-in-btn" mat-button (click)="onLogin()" class=" full-width-input"
                         [disabled]="!loginFormGroup.valid || canDisableSignInButton">
                     <span class="text-color-login-form">Sign In</span>
                 </button>

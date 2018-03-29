@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('mean-angular5 App', () => {
+describe('H project testing', () => {
   let page: AppPage;
 
   beforeEach(() => {
@@ -9,6 +9,6 @@ describe('mean-angular5 App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Welcome to my page');
   });
 });
